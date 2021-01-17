@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.mb-10 {
+    margin-bottom: 100px;
+}
+
+.mt-10 {
+    margin-top: 100px;
+}
+
+.nav a:hover{
+    border-bottom: 2px #FFB400;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.kotak{
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0px;
+    box-shadow: 5px 5px 15px rgb(146, 146, 146);
+    border-radius: 10px;
+}
+
+.box{
+    margin-top : -30px;
+}
+
+.destinasi{
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.kontak .ikon{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.kontak img{
+    width: 50px;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+   border-bottom: 1px solid #E3E3E3;
+    top: 0;
+    width: 100%;
+}
+
+li a{
+    color: black;
+    margin: 10px;
+}
+
+li .akhir{
+    color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background-color:#FFB400;
+}
+
+.carousel img{
+    height: 600px;
+}
+
+.carousel-caption {
+    margin-bottom: 150px;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.box{
+    color: white;
+    box-shadow: 5px 5px 15px rgba(100,100,100 0.2);
+    background-color: #040E27;
+    padding:40px;
+}
+
+.button{
+    color:#ffffff;
+    background-color: #FFB400;
+    border:none;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 15px 2rem;
+}
+
+.button-mini{
+    color:#ffffff;
+    background-color: #FFB400;
+    border:none;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    text-decoration: none;
+    padding: 7px 13px;
+}
+
+.button:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.detail_wisata{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.destinasi_wisata {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px 15px rgba(100,100,100 0.3);
+}
+
+.destinasi_wisata img{
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.gambar_hotel{
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 450px;
+    width: 400px;
+}
+
+.imgAbout img{
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
+
+.tim .carousel-item{
+    text-align: center;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.tim{
+    padding:20px;
+    background-color: #FFB400;
+}
+
+.tim img{
+    border:5px solid #ffffff;
+    border-radius: 50%;
+    width:250px;
+    height: 270px;
+}
+
+.captAbout {
+   line-height: 30px;
+}
+
+.ulasan{
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 15px rgba(100,100,100 0.3);
+}
+
+.judul{
+    color: white;
+    margin-top: 150px;
+    justify-content: center;
+    margin-left: 20%;
+    width: 60%;
+}
+
+.judul2{
+    justify-content: center;
+    margin-left: 20%;
+    width: 60%;
+}
+
+.card{
+    border-radius: 8px;
+    border:none;
+    margin:10px;
+    max-width: 20rem;
+    height: 22rem;
+}
+
+.gambar{
+    height: 25rem;
+}
+
+.gambar img{
+    max-height: 25rem;
+}
+
+.card img{
+    /* border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px; */
+    /* max-width: 300px; */
+    max-height: 200px;
+}
+
+.about img{
+    width: 550px;
+    height: 600px;
+}
+
+.about .capt p{
+    font-size: 16px;
+    color: #ADB5BF;
+}
+
+.hotel .capt{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gambar_depan{
+    background: url('../img/batu.jpg');
+    background-size: cover;
+    height: 400px;
+}
+
+.subs{
+    margin-top: 100px;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.subs input .form-control{
+    font-size: 20px;
+    border: 1px solid rgba(100,100,100 0.3);
+    padding: 15px 2rem;
+}
+
+.hotel .img{
+   justify-content: center;
+    text-align: center;
+}
+
+.footer{
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: #222831;
+    height: 380px;
+}
+.footer .text{
+    margin-top: 50px;
+}
+
+.footer h4{
+    margin-bottom: 30px;
+}
+
+.footer a{
+    color: white;
+}
+
+
+
