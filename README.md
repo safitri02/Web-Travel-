@@ -1,3 +1,1 @@
-Nama : Safitri
-Kelas : XII RPL 2
-No Absen : 22
+Safitri XII RPL 2 (22)
