@@ -38,15 +38,13 @@
 <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
 </div>
 
-
-
 <div class="row mt-5">
 @forelse ($wisata as $eksplor)
     <div class="col-md-3">
     <div class="card" style=" border-radius:10px; border:none; box-shadow:5px 5px 15px rgba(100,100,100,0.3);">
     <img style="border-radius:10px;" src="{{ url('/storage/'.$eksplor->gambar) }}" class="careksplor-img-top" alt="{{ $eksplor->nama_wisata }}">
     <div class="card-body">
-    {{-- <badge class="badge bg-success mb-2" style="color:white;"> Kategori </badge> --}}
+    <badge class="badge bg-success mb-2" style="color:white;"> Kategori </badge>
         <h5 class="card-title"><a style="color:black;" href="/wisata/{{ $eksplor->id }}/eksplor">{{ $eksplor->nama_wisata }}</a></h5>
         <p style="opacity:0.7;">{{ $eksplor->lokasi }}</p>
     </div>

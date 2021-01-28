@@ -57,7 +57,7 @@ class PageController extends Controller
         // return $cari_wisata;
         $cari = $req->cari;
         // return $cari;
-        $wisata = DB::table('wisata')->where('nama_wisata', 'like', "%". $cari ."%")->get();
+        $wisata = DB::table('wisata')->where('nama_wisata', 'like', "%". $cari ."%")->paginate(12);
         return view('home.eksplorasi', compact('wisata'));
     }
 
@@ -69,10 +69,10 @@ class PageController extends Controller
             'nama' => 'required',
             'komentar' => 'required'
         ]);
-        // return $id;
         //ambil id wisata
-        $id_wisata = $id;
-        $ulasan = New Komentar;
+        $id_wisata = $req->$id;
+    
+        $ulasan = new Komentar;
         $ulasan->id_wisata = $id_wisata;
         $ulasan->nama = $req->nama;
         $ulasan->komentar = $req->komentar;
@@ -96,9 +96,10 @@ class PageController extends Controller
     //     return view('home.hotel_detail', compact('hotel'));
     // }
 
-    public function kuliner()
+    public function kategori()
     {
-        # code...
+        $kat = kategori::all();
+        return view('home.kategori', compact('kat'));
     }
 
     public function kontak()

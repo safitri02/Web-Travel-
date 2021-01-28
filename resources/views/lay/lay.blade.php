@@ -32,7 +32,7 @@
       <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
       <li class="nav-item"><a class="nav-link" href="/eksplorasi">Eksplorasi</a> 
       <li class="nav-item"><a class="nav-link" href="/destinasi">Wisata Daerah</a></li>
-      {{-- <li class="nav-item"><a class="nav-link" href="/kuliner">Kulineran</a></li> --}}
+      <li class="nav-item"><a class="nav-link" href="/kategori">Kategori</a></li>
       <li class="nav-item"><a class="nav-link" href="/tentang">Tentang</a>
       <li class="nav-item"><a class="nav-link" href="/kontak">Kontak</a></li>
       {{-- <li class="nav-item"><a class="nav-link akhir" style="color:white;" href="">Booking</a></li> --}}

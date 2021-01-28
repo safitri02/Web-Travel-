@@ -27,6 +27,15 @@
         </div>
 
         <div class="form-group">
+        <label for="id_kategori">Daerah</label>
+        <select class="form-control" name="id_kategori">
+        @foreach($kategori as $k)
+        <option value="{{ $k->id }}">{{ $k->nama }}</option>
+        @endforeach
+        </select>
+        </div>
+
+        <div class="form-group">
         <label for="deskripsi">Deskripsi</label>
         <input type="text" autofocus autocomplete="off" class="form-control" name="deskripsi">
         </div>

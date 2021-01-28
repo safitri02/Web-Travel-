@@ -27,6 +27,7 @@ Route::get('/tentang', 'PageController@tentang');
 Route::get('/destinasi', 'PageController@wisata');
 Route::get('/destinasi/{daerah}', 'PageController@per_daerah');
 Route::post('/cari_wisata', 'PageController@cari_wisata');
+
 Route::get('/eksplorasi', 'PageController@eksplorasi');
 Route::get('/wisata/{id}/eksplor', 'PageController@wisata_detail');
 Route::get('/kuliner', 'PageController@kuliner');
@@ -42,7 +43,9 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/daerah', 'AdminController@daerah');
 Route::get('/tambah_daerah', 'AdminController@tambah_daerah');
 Route::post('/tambah_daerah', 'AdminController@daerah_store');
-
+Route::get('/kategori', 'AdminController@kategori');
+Route::get('tambah_kategori', 'AdminController@tambah_kategori');
+Route::post('tambah_kategori', 'AdminController@store_kategori');
 Route::get('/wisata', 'AdminController@wisata');
 Route::get('/tambah_wisata', 'AdminController@add_wisata');
 Route::post('/tambah_wisata', 'AdminController@store');

@@ -59,8 +59,11 @@
                 <a class="nav-link collapsed" href="/wisata">
                     <span>Wisata</span>
                 </a>
-                 <a class="nav-link collapsed" href="/daerah">
+                <a class="nav-link collapsed" href="/daerah">
                     <span>Daerah</span>
+                </a>
+                 <a class="nav-link collapsed" href="/kategori">
+                    <span>Kategori</span>
                 </a>
                 <a class="nav-link collapsed" href="/restoran">
                     <span>Restoran</span>

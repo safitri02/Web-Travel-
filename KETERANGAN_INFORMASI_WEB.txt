@@ -1,0 +1,8 @@
+Keterangan :
+Nama : Safitri
+Kelas : XII RPL 2
+No Absen : 22
+
+Tugas : Membuat web travel
+
+Login admin : safitri02@gmail.com (email), safitri02 (password)

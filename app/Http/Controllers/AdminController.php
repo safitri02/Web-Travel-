@@ -8,6 +8,7 @@ use App\Daerah;
 Use Alert;
 use App\Restoran;
 use App\Tiket;
+use App\Kategori;
 use Validator;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class AdminController extends Controller
 
     public function wisata()
     {
-        $wisata = Wisata::with('daerah')->get();
+        $wisata = Wisata::with('daerah', 'kategori')->paginate(5);
         return view('admin.wisata', compact('wisata'));
     }
 
@@ -37,6 +38,7 @@ class AdminController extends Controller
             'nama_wisata' => 'required',
             'deskripsi' => 'required',
             'id_daerah' => 'required',
+            'id_kategori' => 'required',
             'lokasi' => 'required',
             'gambar' => 'required|image'
         ]);
@@ -46,6 +48,7 @@ class AdminController extends Controller
         $wisata->deskripsi = $req->deskripsi;
         $wisata->lokasi = $req->lokasi;
         $wisata->id_daerah = $req->id_daerah;
+        $wisata->id_kategori = $req->id_kategori;
         $wisata->gambar = $req->file('gambar')->store('/gambar', 'public');
         $wisata->save();
 
@@ -57,7 +60,6 @@ class AdminController extends Controller
             return redirect('/tambah_wisata');
         }
 
-        
     }
 
     public function destory($id)
@@ -65,7 +67,49 @@ class AdminController extends Controller
         $hapus = Wisata::findOrFail($id);
         $hapus->delete();
 
-        return redirect('/wisata');
+        if($hapus){
+            Alert::success('Selamat', 'Wisata Berhasil dihapus');
+            return redirect('/wisata');
+        } else{
+            Alert::error('Gagal', 'Wisata gagal dihapus');
+            return redirect('/wisata');
+        }
+        
+    }
+
+    public function kategori()
+    {
+        $kategori = Kategori::all();
+        return view('admin.kategori', compact('kategori'));
+    }
+
+    public function tambah_kategori()
+    {
+       return view('admin.tambah_kategori');
+    }
+
+    public function store_kategori(Request $req)
+    {
+        // return $req;
+        $req->validate([
+            'kategori' => 'required',
+            'deskripsi' => 'required',
+            'gambar' => 'required|image'
+        ]);
+
+        $kat = new kategori;
+        $kat->kategori = $req->kategori;
+        $kat->deskripsi = $req->deskripsi;
+        $kat->gambar = $req->file('gambar')->store('/gambar', 'public');
+        $kat->save();
+
+        if($kat){
+            Alert::success('Berhasil', 'Data kategori berhasil ditambah');
+            return redirect('/kategori');
+        } else{
+            Alert::error('Gagal', 'Data kategori gagal ditambah');
+            return redirect('/tambah_kategori');
+        }
     }
 
     public function restoran()
@@ -175,6 +219,13 @@ class AdminController extends Controller
         $daerah->gambar = $req->file('gambar')->store('/gambar', 'public');
         $daerah->save();
 
-        return redirect('/daerah');
+        if($daerah){
+            Alert::success('Berhasil', 'Data daerah berhasil ditambah');
+            return redirect('/daerah');
+        } else{
+            Alert::error('Gagal', 'Data daerah gagal ditambah');
+            return redirect('/tambah_daerah');
+        }
+        
     }
 }

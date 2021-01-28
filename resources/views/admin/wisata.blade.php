@@ -19,7 +19,8 @@
                     <th>Wisata</th>
                     <th>Deskripsi</th>
                     <th>Lokasi</th>
-                    <th> Daerah </th>
+                    <th>Daerah </th>
+                    <th>Kategori</th>
                     <th>Gambar</th>
                     <th>Aksi</th>
                 </tr>
@@ -34,13 +35,13 @@
                     <td>{{ $w->nama_wisata }}</td>
                     <td>{{ $w->deskripsi }}</td>
                     <td>{{ $w->lokasi }}</td>
-                     <td>{{ $w->daerah->nama }}</td>
+                    <td>{{ $w->daerah->nama }}</td>
+                    <td>{{ $w->kategori->kategori }}</td>
                     <td>
                     <img src="{{ url('/storage/'. $w->gambar) }}" style="max-width:30px;"> 
                     </td>
                     <td> 
                         <a href="/hapus_wisata/{{ $w->id }}" class="btn btn-danger btn-sm"> Hapus </a>
-                        <a href="/edit_wisata/{{ $w->id }}" class="btn btn-warning btn-sm"> Edit </a>
                     </td>
                 </tr>
                 </tbody>
@@ -50,6 +51,9 @@
                 </tr>
             @endforelse
         </table>
+        <div class="col-md-12 mt-5 text-center justify-content-center">
+        {{ $wisata->links() }}
+        </div>
     </div>
 </div>
 </div>
