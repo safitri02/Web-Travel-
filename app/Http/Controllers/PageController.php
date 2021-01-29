@@ -8,6 +8,7 @@ use App\Hotel;
 use App\Komentar;
 use App\Restoran;
 use App\Kategori;
+use Alert;
 use App\Tiket;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -64,22 +65,21 @@ class PageController extends Controller
 
     public function ulasan(Request $req, $id)
     {
+        // $id_wisata = $id;
+        // return $id_wisata;
+        // die;
 
-        $req->validate([
-            'id_wisata' => 'required',
-            'nama' => 'required',
-            'komentar' => 'required'
-        ]);
         //ambil id wisata
-        $id_wisata = $req->$id;
-    
-        $ulasan = new Komentar;
-        $ulasan->id_wisata = $id_wisata;
-        $ulasan->nama = $req->nama;
-        $ulasan->komentar = $req->komentar;
-        $ulasan->save();
+        $id_wisata = $id;
+
+        $komen = new Komentar;
+        $komen->id_wisata = $id_wisata;
+        $komen->nama = $req->nama;
+        $komen->komentar = $req->komentar;
+        $komen->save();
 
         return back();
+        
     }
 
     // public function hotelresto()
@@ -106,7 +106,8 @@ class PageController extends Controller
     public function berdasarKategori(Request $req, $id)
     {
         // $id = Kategori::find($id);
-        $katwis = DB::table('wisata')->where('id_kategori', $id)->paginate(9);
+        // $katwis = DB::table('wisata')->where('id_kategori', $id)->paginate(9);
+        $katwis = Wisata::with('kategori')->where('id_kategori', $id)->paginate(9);
         return view('home.kategori_detail', compact('katwis'));
 
         // $ulasan = DB::table('komentar')->where('id_wisata', $id)->get();

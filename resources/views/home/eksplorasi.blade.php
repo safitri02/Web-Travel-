@@ -35,7 +35,7 @@
 {{-- Wisata --}}
 <div class="judul2 text-center mt-5 mb-5">
 <h1 style="font-weight:700;">Eksplorasi Wisata</h1>
-<p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
+<p>Indonesia terkenal di mancanegara sebagai negara dengan alam yang indah. Negara kepulauan seluas 1,91 juta km2 ini memang memiliki bentang alam yang memesona, mulai dari sabang sampai merauke</p>
 </div>
 
 <div class="row mt-5">

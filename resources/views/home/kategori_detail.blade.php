@@ -22,7 +22,7 @@
     <div class="card" style=" border-radius:10px; border:none; box-shadow:5px 5px 15px rgba(100,100,100,0.3);">
     <img style="border-radius:10px;" src="{{ url('/storage/'.$k->gambar) }}" class="card-img-top" alt="{{ $k->nama_wisata }}">
     <div class="card-body">
-    <badge class="badge bg-success mb-2" style="color:white;"> Kategori </badge>
+    <badge class="badge bg-success mb-2" style="color:white;"> {{ $k->kategori->kategori }} </badge>
         <h5 class="card-title"><a style="color:black;" href="/wisata/{{ $k->id }}/eksplor">{{ $k->nama_wisata }}</a></h5>
         <p style="opacity:0.7;">{{ $k->lokasi }}</p>
     </div>

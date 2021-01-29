@@ -42,6 +42,9 @@
 <div class="col-md-6">
    <form action="/ulasan/{{ $eksplor->id }}" method="post">
    @csrf
+   {{-- <div class="input-group mb-3">
+      <input type="hidden" class="form-control" name="id_wisata">
+  </div> --}}
    <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Masukan Nama" autocomplete="off" name="nama">
     </div>
