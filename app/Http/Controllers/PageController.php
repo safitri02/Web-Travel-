@@ -7,6 +7,7 @@ use App\Daerah;
 use App\Hotel;
 use App\Komentar;
 use App\Restoran;
+use App\Kategori;
 use App\Tiket;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -35,7 +36,7 @@ class PageController extends Controller
 
     public function eksplorasi()
     {
-        $wisata = Wisata::paginate(12);
+        $wisata = Wisata::with('kategori')->paginate(12);
         return view('home.eksplorasi', compact('wisata'));
     }
 
@@ -100,6 +101,15 @@ class PageController extends Controller
     {
         $kat = kategori::all();
         return view('home.kategori', compact('kat'));
+    }
+
+    public function berdasarKategori(Request $req, $id)
+    {
+        // $id = Kategori::find($id);
+        $katwis = DB::table('wisata')->where('id_kategori', $id)->paginate(9);
+        return view('home.kategori_detail', compact('katwis'));
+
+        // $ulasan = DB::table('komentar')->where('id_wisata', $id)->get();
     }
 
     public function kontak()

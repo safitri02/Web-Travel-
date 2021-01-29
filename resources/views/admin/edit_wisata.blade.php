@@ -9,12 +9,12 @@
 <div class="col-8">
 <div class="card">
     <div class="card-body">
-    <h4 class="card-title">Tambah Wisata</h4>
+    <h4 class="card-title">Edit Wisata</h4>
     <form class="forms-sample" method="post" action="/tambah_wisata" enctype="multipart/form-data"> 
     @csrf
         <div class="form-group">
         <label for="nama_wisata">Wisata</label>
-        <input type="text" autofocus autocomplete="off" class="form-control" name="nama_wisata">
+        <input type="text" autofocus autocomplete="off" class="form-control" value="{{ $edit->nama_wisata }}" name="nama_wisata">
         </div>
 
         <div class="form-group">
@@ -37,11 +37,11 @@
 
         <div class="form-group">
         <label for="deskripsi">Deskripsi</label>
-         <textarea class="form-control" name="deskripsi" autocomplete="off" aria-label="With textarea" placeholder="Tulis Deskripsi"></textarea>
+         <input class="form-control" name="deskripsi" value="{{ $edit->deskripsi }}" autocomplete="off" placeholder="Tulis Deskripsi"></input>
         </div>
         <div class="form-group">
         <label for="lokasi">Lokasi</label>
-        <input type="text" autofocus autocomplete="off" class="form-control" name="lokasi">
+        <input type="text" autofocus autocomplete="off" value="{{ $edit->lokasi }}" class="form-control" name="lokasi">
         </div>
         <div class="form-group">
         <label for="gambar">Image</label>

@@ -58,11 +58,11 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/wisata">
                     <span>Wisata</span>
-                </a>
+                </a> 
                 <a class="nav-link collapsed" href="/daerah">
                     <span>Daerah</span>
                 </a>
-                 <a class="nav-link collapsed" href="/kategori">
+                 <a class="nav-link collapsed" href="/kategoriWisata">
                     <span>Kategori</span>
                 </a>
                 <a class="nav-link collapsed" href="/restoran">

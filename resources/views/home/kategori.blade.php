@@ -14,6 +14,27 @@
 </div>
 {{-- End Jumbotron --}}
 
+<div class="container mb-10">
+
+  @foreach($kat as $k)
+  <div class="row justify-content-center">
+  <div class="col-md-12">
+  <div class="destinasi_wisata" style="border-radius:10px; padding:20px; box-shadow:5px 5px 15px rgba(100,100,100,0.3); margin:20px;">
+      <div class="img">
+        <img src="{{ url('/storage/'.$k->gambar) }}">
+      </div>
+      <div class="capt ml-5">
+      <h3>{{ $k->kategori }}</h3>
+      <p style="font-size:16px;">{{ $k->deskripsi }}</p>
+      <a href="/kategori/{{ $k->id }}" class="mt-3"> Selengkapnya </a>
+      </div>
+  </div>
+  </div>
+  </div>
+  @endforeach
+
+</div>
+
 @endsection
 
 @section('footer')

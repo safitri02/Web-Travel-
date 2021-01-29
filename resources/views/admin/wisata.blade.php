@@ -42,6 +42,7 @@
                     </td>
                     <td> 
                         <a href="/hapus_wisata/{{ $w->id }}" class="btn btn-danger btn-sm"> Hapus </a>
+                         <a href="/edit_wisata/{{ $w->id }}" class="btn btn-warning mt-2 btn-sm"> Edit </a>
                     </td>
                 </tr>
                 </tbody>

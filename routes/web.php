@@ -27,13 +27,14 @@ Route::get('/tentang', 'PageController@tentang');
 Route::get('/destinasi', 'PageController@wisata');
 Route::get('/destinasi/{daerah}', 'PageController@per_daerah');
 Route::post('/cari_wisata', 'PageController@cari_wisata');
-
+Route::get('/kategori', 'PageController@kategori');
 Route::get('/eksplorasi', 'PageController@eksplorasi');
 Route::get('/wisata/{id}/eksplor', 'PageController@wisata_detail');
 Route::get('/kuliner', 'PageController@kuliner');
 Route::get('/hotel_detail/{id}', 'PageController@hotel_detail');
 Route::post('/ulasan/{id}', 'PageController@ulasan');
 Route::get('/kontak', 'PageController@kontak');
+Route::get('/kategori/{id}', 'PageController@berdasarKategori');
 
 //Booking Hotel & Beli Tiket
 Route::get('/booking_hotel/{id}', 'TransaksiController@booking_hotel');
@@ -43,13 +44,15 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/daerah', 'AdminController@daerah');
 Route::get('/tambah_daerah', 'AdminController@tambah_daerah');
 Route::post('/tambah_daerah', 'AdminController@daerah_store');
-Route::get('/kategori', 'AdminController@kategori');
+Route::get('/kategoriWisata', 'AdminController@kategori');
 Route::get('tambah_kategori', 'AdminController@tambah_kategori');
 Route::post('tambah_kategori', 'AdminController@store_kategori');
 Route::get('/wisata', 'AdminController@wisata');
 Route::get('/tambah_wisata', 'AdminController@add_wisata');
 Route::post('/tambah_wisata', 'AdminController@store');
 Route::get('/hapus_wisata/{id}', 'AdminController@destory');
+Route::get('/edit_wisata/{id}', 'AdminController@edit');
+Route::post('/edit_wisata/{id}', 'AdminController@update');
 Route::get('/restoran', 'AdminController@restoran');
 Route::get('/tambah_restoran', 'AdminController@tambah_restoran');
 Route::post('/tambah_restoran', 'AdminController@restoran_store');

@@ -27,8 +27,9 @@ class AdminController extends Controller
 
     public function add_wisata()
     {
+        $kategori = Kategori::all();
         $daerah = Daerah::all();
-        return view('admin.add_wisata', compact('daerah'));
+        return view('admin.add_wisata', compact('daerah', 'kategori'));
     }
 
     public function store(Request $req)
@@ -61,6 +62,20 @@ class AdminController extends Controller
         }
 
     }
+
+    public function edit($id)
+    {
+        $edit = Wisata::find($id);
+        $kategori = Kategori::all();
+        $daerah = Daerah::all();
+        Return view('admin.edit_wisata', compact('kategori', 'daerah', 'edit'));
+    }
+
+    public function update(Request $req, $id)
+    {
+        $edit = Wisata::find($id);
+        return $edit;
+    }    
 
     public function destory($id)
     {
@@ -105,7 +120,7 @@ class AdminController extends Controller
 
         if($kat){
             Alert::success('Berhasil', 'Data kategori berhasil ditambah');
-            return redirect('/kategori');
+            return redirect('/kategoriWisata');
         } else{
             Alert::error('Gagal', 'Data kategori gagal ditambah');
             return redirect('/tambah_kategori');

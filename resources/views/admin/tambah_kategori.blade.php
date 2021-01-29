@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
         <label for="deskripsi">Deskripsi</label>
-        <input type="text" autofocus autocomplete="off" class="form-control" name="deskripsi">
+        <textarea type="text" autofocus autocomplete="off" class="form-control" name="deskripsi"></textarea>
         </div>
         <div class="form-group">
         <label for="gambar">Image</label>
