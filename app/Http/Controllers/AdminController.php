@@ -94,7 +94,7 @@ class AdminController extends Controller
 
     public function kategori()
     {
-        $kategori = Kategori::all();
+        $kategori = Kategori::paginate(8);
         return view('admin.kategori', compact('kategori'));
     }
 

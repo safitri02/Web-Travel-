@@ -33,6 +33,10 @@
   </div>
   @endforeach
 
+   <div class="col-md-12 mt-5 text-center justify-content-center">
+        {{ $kat->links() }}
+        </div>
+
 </div>
 
 @endsection

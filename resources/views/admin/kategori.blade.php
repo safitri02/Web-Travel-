@@ -45,6 +45,9 @@
                 </tr>
             @endforelse
         </table>
+         <div class="col-md-12 mt-5 text-center justify-content-center">
+        {{ $kategori->links() }}
+        </div>
     </div>
 </div>
 </div>

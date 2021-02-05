@@ -99,7 +99,7 @@ class PageController extends Controller
 
     public function kategori()
     {
-        $kat = kategori::all();
+        $kat = kategori::paginate(5);
         return view('home.kategori', compact('kat'));
     }
 
